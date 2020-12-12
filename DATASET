@@ -2517,3 +2517,35 @@ create table PAYMENTS (
 
 
     
+CREATE TABLE CUSTINFO (
+SERIAL_NO SERIAL  ,
+ACCNO INT NOT NULL PRIMARY KEY UNIQUE ,
+CLIENT_NAME VARCHAR NOT NULL ,
+MOBLIE_NO VARCHAR,
+EMAIL VARCHAR );
+
+INSERT INTO CUSTINFO (ACCNO , CLIENT_NAME , MOBLIE_NO , EMAIL)
+VALUES  (11000 , 'BANK FD ACCOUNT' , '0265 537832','Bankfd@gmail.com'),
+        (11011 , 'RUDRAKSHA GOHIL' , '9825894124','rudrakshagohil@yahoo.com'),
+        (11012 , 'RAMNATH KOLHI' , '9909150006', 'ramnathkolhi099@gmail.com'),
+                                  (11013 , 'GURUCHANK SINGH' , '6335489420', 'guruchanksingh33@hotmail.com'),
+                                  (11014 , 'BHUPANDRA PATEL' , '9833737546', 'bhupandrapatel9878@gmail.com') ,
+                                  (11015 , 'AJAY SHAH' , '9992220126', 'ajayshah522@gmail.com'),
+                                  (11016 , 'PARTH RATHOD' , '9823452441','parthrathod34@gmail.com'),
+                              (11017 , 'AARYAN DESAI' , '9823115403', 'aaryandesai.22@gmail.com');
+
+CREATE TABLE MAIN_TRANSACTION_CASH (
+ACCNO INT NOT NULL PRIMARY KEY UNIQUE ,
+CLIENT_NAME VARCHAR NOT NULL ,
+MOBLIE_NO VARCHAR ,
+BALANCE INT);
+
+INSERT INTO MAIN_TRANSACTION_CASH(ACCNO , CLIENT_NAME , MOBLIE_NO ,BALANCE )
+VALUES  (11011 , 'RUDRAKSHA GOHIL' , '9825894124' , 65000  ),
+        (11012 , 'RAMNATH KOLHI' , '9909150006' , 55000 ),
+                                  (11013 , 'GURUCHANK SINGH' , '6335489420' , 45000 ),
+                                  (11014 , 'BHUPANDRA PATEL' , '9833737546',99000 ) ,
+                              (11015 , 'AJAY SHAH' , '9992220126', 75000 ),
+                                  (11016 , 'PARTH RATHOD' , '9823452441' , 35000 ),
+                                  (11017 , 'AARYAN DESAI' , '9823115403' , 83500 );
+                                  
